@@ -33,6 +33,15 @@
       letter-spacing: 1px;
     }
 
+    .partial-banner {
+      background: #ffb000;
+      color: #002d72;
+      text-align: center;
+      padding: 12px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
     nav {
       background: #001f4d;
       padding: 10px 24px;
@@ -68,6 +77,7 @@
       border-radius: 8px;
       padding: 22px;
       box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+      position: relative;
     }
 
     .route-number {
@@ -84,6 +94,17 @@
       font-size: 12px;
       border-radius: 4px;
       margin-bottom: 6px;
+    }
+
+    .start-tag {
+      display: inline-block;
+      background: #ffb000;
+      color: #002d72;
+      padding: 4px 8px;
+      font-size: 12px;
+      border-radius: 4px;
+      margin-left: 6px;
+      font-weight: bold;
     }
 
     .frequency {
@@ -110,6 +131,10 @@
 
 <div class="service-banner">
   🚍 STARTS SERVICE 31ST JANUARY 🚍
+</div>
+
+<div class="partial-banner">
+  ⚠️ PARTIALLY STARTING ON 26TH JANUARY ⚠️
 </div>
 
 <nav>
@@ -151,7 +176,8 @@
       type: "Urban local service",
       name: "Chesterfield – Newbold – Staveley",
       description: "Serving town centre, housing estates and local shopping areas.",
-      frequency: "Every 10 minutes (daytime)"
+      frequency: "Every 10 minutes (daytime)",
+      startsEarly: true
     },
     {
       number: "90",
@@ -159,7 +185,8 @@
       type: "Urban local service",
       name: "Pinxton – South Normanton",
       description: "Local Retail Park to Retail Park Village To Village.",
-      frequency: "Every 20 minutes"
+      frequency: "Every 20 minutes",
+      startsEarly: true
     },
     {
       number: "90a",
@@ -176,7 +203,7 @@
       name: "Pinxton - Pinxton",
       description: "Tiny Circular Service in a square taking 4 minutes.",
       frequency: "Every 6 minutes"
-    },
+    }
   ];
 
   const routeList = document.getElementById("routeList");
@@ -187,6 +214,7 @@
 
     card.innerHTML = `
       <span class="tag">${route.type}</span>
+      ${route.startsEarly ? `<span class="start-tag">Starts 26 Jan</span>` : ""}
       <div class="route-number">${route.number}</div>
       <h3>${route.name}</h3>
       <p>${route.description}</p>
