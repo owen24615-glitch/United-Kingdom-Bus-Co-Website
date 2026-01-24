@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <title>United Kingdom Bus Co’</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f8;
+      color: #222;
+    }
+
+    header {
+      background: #002d72;
+      color: white;
+      padding: 18px 24px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .service-banner {
+      background: #c8102e;
+      color: white;
+      text-align: center;
+      padding: 14px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      background: #001f4d;
+      padding: 10px 24px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 22px;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 34px 24px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      border-left: 6px solid #002d72;
+      padding-left: 12px;
+    }
+
+    .routes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 22px;
+      margin-top: 24px;
+    }
+
+    .route-card {
+      background: white;
+      border-radius: 8px;
+      padding: 22px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+    }
+
+    .route-number {
+      font-size: 34px;
+      font-weight: bold;
+      color: #002d72;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e6eef9;
+      color: #002d72;
+      padding: 4px 8px;
+      font-size: 12px;
+      border-radius: 4px;
+      margin-bottom: 6px;
+    }
+
+    .frequency {
+      margin-top: 8px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #002d72;
+      color: white;
+      text-align: center;
+      padding: 18px;
+      margin-top: 50px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>United Kingdom Bus Co’</h1>
+</header>
+
+<div class="service-banner">
+  🚍 STARTS SERVICE 31ST JANUARY 🚍
+</div>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#routes">Routes</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="container" id="about">
+  <h2>England Local Bus Network</h2>
+  <p>
+    United Kingdom Bus Co’ operates local stopping services across England.
+    Route numbers indicate the type of service, with frequent urban routes,
+    inter-urban locals and estate feeder services all clearly identified.
+  </p>
+</div>
+
+<div class="container" id="routes">
+  <h2>Local Bus Routes</h2>
+  <p>All services are local stopping routes unless stated otherwise.</p>
+
+  <div class="routes" id="routeList"></div>
+</div>
+
+<div class="container" id="contact">
+  <h2>Contact</h2>
+  <p>Email: info@ukbusco.co.uk</p>
+  <p>Customer Services: 0300 400 7000</p>
+</div>
+
+<footer>
+  © 2026 United Kingdom Bus Co’ · England Local Services
+</footer>
+
+<script>
+  const routes = [
+    {
+      number: "7",
+      type: "Urban local service",
+      name: "Chesterfield – Newbold – Staveley",
+      description: "Serving town centre, housing estates and local shopping areas.",
+      frequency: "Every 10 minutes (daytime)"
+    },
+    {
+      number: "18",
+      type: "Urban local service",
+      name: "Canterbury – Wincheap – Thanington",
+      description: "Local circular route serving schools, retail parks and housing areas.",
+      frequency: "Every 15 minutes"
+    },
+    {
+      number: "56",
+      type: "Inter-urban local service",
+      name: "Bedford – Kempston – Ampthill",
+      description: "Stopping service through villages and residential areas.",
+      frequency: "Every 30 minutes"
+    },
+    {
+      number: "63",
+      type: "Inter-urban local service",
+      name: "Wigan – Leigh",
+      description: "High-demand corridor serving town centres and employment zones.",
+      frequency: "Every 12 minutes"
+    },
+    {
+      number: "112",
+      type: "Estate & feeder service",
+      name: "Taunton – Priorswood – Monkton Heathfield",
+      description: "Estate-focused route connecting residential areas to the town centre.",
+      frequency: "Every 20 minutes"
+    },
+    {
+      number: "128",
+      type: "Estate & feeder service",
+      name: "Grimsby – Scartho – New Waltham",
+      description: "Local stopping service linking housing areas with hospitals and shops.",
+      frequency: "Every 30 minutes"
+    }
+  ];
+
+  const routeList = document.getElementById("routeList");
+
+  routes.forEach(route => {
+    const card = document.createElement("div");
+    card.className = "route-card";
+
+    card.innerHTML = `
+      <span class="tag">${route.type}</span>
+      <div class="route-number">${route.number}</div>
+      <h3>${route.name}</h3>
+      <p>${route.description}</p>
+      <div class="frequency">🕒 ${route.frequency}</div>
+    `;
+
+    routeList.appendChild(card);
+  });
+</script>
+
+</body>
+</html>
