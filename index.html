@@ -92,6 +92,32 @@
       font-weight: bold;
     }
 
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 24px;
+      background: white;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 12px 8px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    th {
+      background-color: #002d72;
+      color: white;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
     footer {
       background: #002d72;
       color: white;
@@ -116,6 +142,7 @@
 <nav>
   <a href="#about">About</a>
   <a href="#routes">Routes</a>
+  <a href="#fleet">Fleet</a>
   <a href="#contact">Contact</a>
 </nav>
 
@@ -133,6 +160,44 @@
   <p>All services are local stopping routes.</p>
 
   <div class="routes" id="routeList"></div>
+</div>
+
+<div class="container" id="fleet">
+  <h2>Fleet List</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Fleet Number</th>
+        <th>Registration Plate</th>
+        <th>Livery</th>
+        <th>Type</th>
+        <th>Features</th>
+        <th>Depot</th>
+      </tr>
+    </thead>
+    <tbody id="fleetList">
+      <tr><td>177</td><td>YX73 OUB</td><td>Ex Trentbarton Mango</td><td>ADL Enviro200 MMC</td><td>USB-C, USB-A, Wireless Charging, Announcements</td><td>Sutton</td></tr>
+      <tr><td>178</td><td>YX23 OUB</td><td>United Kingdom Bus Co</td><td>ADL Enviro200 MMC</td><td>USB-C, USB-A, Wireless Charging, Wi-Fi, Announcements</td><td>Chesterfield</td></tr>
+      <tr><td>179</td><td>YX23 WMD</td><td>United Kingdom Bus Co</td><td>ADL Enviro200 MMC</td><td>USB-C, USB-A, Wireless Charging, Wi-Fi, Announcements</td><td>Chesterfield</td></tr>
+      <tr><td>180</td><td>YX66 WMD</td><td>United Kingdom Bus Co</td><td>ADL Enviro200 MMC</td><td>USB-A, Announcements</td><td>Sutton</td></tr>
+      <tr><td>277</td><td>YX23 OTA</td><td>Pinxton 90</td><td>ADL Enviro200 MMC</td><td>USB-A, Wi-Fi, Announcements</td><td>Sutton</td></tr>
+      <tr><td>278</td><td>YX23 OTB</td><td>Sargeants / Pinxton 90</td><td>ADL Enviro200 MMC</td><td>USB-A, Wi-Fi, Announcements</td><td>Sutton</td></tr>
+      <tr><td>279</td><td>YX23 OTC</td><td>Sargeants / Pinxton 90</td><td>ADL Enviro200 MMC</td><td>USB-A, Wi-Fi, Announcements</td><td>Sutton</td></tr>
+      <tr><td>280</td><td>YX17 NMV</td><td>Pinxton 90</td><td>ADL Enviro200 MMC</td><td>USB-A, Announcements</td><td>Sutton</td></tr>
+      <tr><td>281</td><td>YX75 WLW</td><td>The 7</td><td>ADL Enviro200 MMC</td><td>USB-C, USB-A, Wireless Charging, Wi-Fi, Announcements</td><td>Chesterfield</td></tr>
+      <tr><td>282</td><td>YX75 WLZ</td><td>The 7</td><td>ADL Enviro200 MMC</td><td>USB-C, USB-A, Wireless Charging, Wi-Fi, Announcements</td><td>Chesterfield</td></tr>
+      <tr><td>283</td><td>YX75 WMA</td><td>The 7</td><td>ADL Enviro200 MMC</td><td>USB-C, USB-A, Wireless Charging, Wi-Fi, Announcements</td><td>Chesterfield</td></tr>
+      <tr><td>284</td><td>YX75 WMC</td><td>The 7</td><td>ADL Enviro200 MMC</td><td>USB-C, USB-A, Wireless Charging, Wi-Fi, Announcements</td><td>Chesterfield</td></tr>
+      <tr><td>285</td><td>YX75 WMD</td><td>The 7</td><td>ADL Enviro200 MMC</td><td>USB-C, USB-A, Wireless Charging, Wi-Fi, Announcements</td><td>Chesterfield</td></tr>
+      <tr><td>286</td><td>YX75 WME</td><td>The 7</td><td>ADL Enviro200 MMC</td><td>USB-C, USB-A, Wireless Charging, Wi-Fi, Announcements</td><td>Chesterfield</td></tr>
+      <tr><td>287</td><td>YX75 WMF</td><td>The 7</td><td>ADL Enviro200 MMC</td><td>USB-C, USB-A, Wireless Charging, Wi-Fi, Announcements</td><td>Chesterfield</td></tr>
+      <tr><td>288</td><td>YX75 WMG</td><td>The 7</td><td>ADL Enviro200 MMC</td><td>USB-C, USB-A, Wireless Charging, Wi-Fi, Announcements</td><td>Chesterfield</td></tr>
+      <tr><td>289</td><td>YX75 WMJ</td><td>The 7</td><td>ADL Enviro200 MMC</td><td>USB-C, USB-A, Wireless Charging, Wi-Fi, Announcements</td><td>Chesterfield</td></tr>
+      <tr><td>290</td><td>YX75 WMK</td><td>The 7</td><td>ADL Enviro200 MMC</td><td>USB-C, USB-A, Wireless Charging, Wi-Fi, Announcements</td><td>Chesterfield</td></tr>
+      <tr><td>291</td><td>YX75 WML</td><td>The 7</td><td>ADL Enviro200 MMC</td><td>USB-C, USB-A, Wireless Charging, Wi-Fi, Announcements</td><td>Chesterfield</td></tr>
+      <tr><td>292</td><td>YX75 WMM</td><td>The 7</td><td>ADL Enviro200 MMC</td><td>USB-C, USB-A, Wireless Charging, Wi-Fi, Announcements</td><td>Chesterfield</td></tr>
+    </tbody>
+  </table>
 </div>
 
 <div class="container" id="contact">
@@ -176,109 +241,11 @@
       frequency: "Every 6 minutes"
     },
     {
-      number: "12",
-      type: "Urban local service",
-      name: "Chesterfield – Hasland – Royal Hospital",
-      description: "Local link between residential areas and hospital.",
-      frequency: "Every 20 minutes"
-    },
-    {
-      number: "18",
-      type: "Urban local service",
-      name: "Mansfield – Forest Town – Clipstone",
-      description: "Estate and village service north of Mansfield.",
-      frequency: "Every 30 minutes"
-    },
-    {
-      number: "21",
-      type: "Urban local service",
-      name: "Derby – Chaddesden – Oakwood",
-      description: "High-demand estate corridor service.",
-      frequency: "Every 12 minutes"
-    },
-    {
-      number: "24",
-      type: "Urban local service",
-      name: "Nottingham – Carlton – Gedling",
-      description: "Frequent suburban service east of the city.",
-      frequency: "Every 10 minutes"
-    },
-    {
-      number: "28",
-      type: "Urban local service",
-      name: "Alfreton – Ripley – Heanor",
-      description: "Town-to-town local stopping service.",
-      frequency: "Every 20 minutes"
-    },
-    {
-      number: "33",
-      type: "Urban local service",
-      name: "Worksop – Gateford – Carlton",
-      description: "Estate and local shopping service.",
-      frequency: "Every 30 minutes"
-    },
-    {
-      number: "41",
-      type: "Urban local service",
-      name: "Lincoln – Birchwood – Hartsholme",
-      description: "City estate and leisure park link.",
-      frequency: "Every 15 minutes"
-    },
-    {
-      number: "52",
-      type: "Urban local service",
-      name: "Leicester – Braunstone – Glenfield",
-      description: "Outer-city local stopping route.",
-      frequency: "Every 12 minutes"
-    },
-    {
-      number: "60",
-      type: "Urban local service",
-      name: "Nottingham – Bulwell – Top Valley",
-      description: "North Nottingham estate corridor.",
-      frequency: "Every 10 minutes"
-    },
-    {
-      number: "71",
-      type: "Urban local service",
-      name: "Chesterfield – Brimington – Staveley",
-      description: "Alternative local link via Brimington.",
-      frequency: "Every 20 minutes"
-    },
-    {
-      number: "82",
-      type: "Urban local service",
-      name: "Mansfield – Berry Hill – Rainworth",
-      description: "Estate and village service.",
-      frequency: "Every 30 minutes"
-    },
-    {
-      number: "95",
-      type: "Urban local service",
-      name: "Derby – Sinfin – Osmaston",
-      description: "Local estate and school link.",
-      frequency: "Every 15 minutes"
-    },
-    {
-      number: "96",
-      type: "Urban local service",
-      name: "Nottingham – Clifton – Wilford",
-      description: "Suburban and local shops service.",
-      frequency: "Every 20 minutes"
-    },
-    {
-      number: "97",
-      type: "Urban local service",
-      name: "Leicester – Belgrave – Abbey Park",
-      description: "Local stopping route connecting estates.",
-      frequency: "Every 12 minutes"
-    },
-    {
-      number: "1",
+      number: "X90",
       type: "Express service",
       name: "Pinxton – Hucknall – Nottingham",
       description: "Express service linking village, town and city with limited stops.",
-      frequency: "Every hour"
+      frequency: "Every 60 minutes"
     }
   ];
 
